@@ -151,7 +151,7 @@ if (permission.Contains("Admin"))
     }
     else
     {
-        Console.WriteLine("Welcome ,Admin user.");
+        Console.WriteLine("Welcome, Admin user.");
     }
 }
 else if (permission.Contains("Manager"))
