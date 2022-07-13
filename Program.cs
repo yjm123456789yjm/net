@@ -81,30 +81,91 @@
 //     Console.WriteLine("You win a kitten!");
 // }
 
-Random random = new Random();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
+// Random random = new Random();
+// int daysUntilExpiration = random.Next(12);
+// int discountPercentage = 0;
 
-if(daysUntilExpiration == 0)
-{
-    Console.WriteLine("Your subscription has expired.");
-}
-else if (daysUntilExpiration == 1)
-{
-    Console.WriteLine("Your subscription expires within a day!");
-    discountPercentage = 20;
-}
-else if (daysUntilExpiration <= 5)
-{
-    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
-    discountPercentage = 10;
-}
-else if (daysUntilExpiration <= 10)
-{
-    Console.WriteLine("Your subscription will expire soon. Renew now!");
-}
+// if(daysUntilExpiration == 0)
+// {
+//     Console.WriteLine("Your subscription has expired.");
+// }
+// else if (daysUntilExpiration == 1)
+// {
+//     Console.WriteLine("Your subscription expires within a day!");
+//     discountPercentage = 20;
+// }
+// else if (daysUntilExpiration <= 5)
+// {
+//     Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
+//     discountPercentage = 10;
+// }
+// else if (daysUntilExpiration <= 10)
+// {
+//     Console.WriteLine("Your subscription will expire soon. Renew now!");
+// }
 
-if (discountPercentage > 0)
+// if (discountPercentage > 0)
+// {
+//     Console.WriteLine($"Renew now and save {discountPercentage}%.");
+// }
+
+// Console.WriteLine("a" == "a");
+// Console.WriteLine("a" == "A");
+// Console.WriteLine(1 == 2);
+
+// string myValue = "a";
+// Console.WriteLine(myValue == "a");
+
+// string value1 = " a";
+// string value2 = "A ";
+// Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
+
+// Console.WriteLine("a" != "a");
+// Console.WriteLine("a" != "A");
+// Console.WriteLine(1 != 2);
+
+// string myValue = "a";
+// Console.WriteLine(myValue != "a");
+
+// Console.WriteLine(1 > 2);
+// Console.WriteLine(1 < 2);
+// Console.WriteLine(1 >= 1);
+// Console.WriteLine(1 <= 1);
+
+// string pangram = "The quick brown fox jumps over the lazy dog.";
+// Console.WriteLine(pangram.Contains("fox"));
+// Console.WriteLine(pangram.Contains("cow"));
+
+// Random coin = new Random();
+// int flip = coin.Next(0,2);
+// Console.WriteLine((flip == 0) ? "heads" : "tails");
+
+string permission = "Admin|Manager";
+int lever = 53;
+
+if (permission.Contains("Admin"))
 {
-    Console.WriteLine($"Renew now and save {discountPercentage}%.");
+    if (lever > 55)
+    {
+        Console.WriteLine("Welcome, super Admin user.");
+    }
+    else
+    {
+        Console.WriteLine("Welcome ,Admin user.");
+    }
+}
+else if (permission.Contains("Manager"))
+{
+    if (lever >= 20)
+    {
+        Console.WriteLine("Contact an Admin for access.");
+    }
+    else
+    {
+        Console.WriteLine("You do not have suuficient privileges.");
+    }
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
 }
